@@ -20,10 +20,11 @@ public class Contact extends Fragment {
     private LinearLayoutManager Layout;
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+
         View myview = inflater.inflate(R.layout.contact, container,false);
         mActivity = Contact.this.getActivity();
-
 
         List<ItemContact> rowListItem =getAllItemList();
         Layout = new LinearLayoutManager(mActivity);

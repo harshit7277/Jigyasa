@@ -26,6 +26,7 @@ public class EventsActivity extends Fragment {
         View myview = inflater.inflate(R.layout.events, container, false);
         mActivity = EventsActivity.this.getActivity();
         super.onCreate(savedInstanceState);
+
         int iconSize = getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
 
         GridView eventsGridView = (GridView) myview.findViewById(R.id.gridview);
@@ -42,15 +43,15 @@ public class EventsActivity extends Fragment {
         });
 
         List<Integer> imageIds = new ArrayList<Integer>() {{
-           /* add(R.drawable.head1);
-            add(R.drawable.head2);
-            add(R.drawable.head3);
-            add(R.drawable.head4);
-            add(R.drawable.head5);
-            add(R.drawable.head6);
-            add(R.drawable.head7);
-            add(R.drawable.head8);
-            add(R.drawable.head9); */
+           add(R.drawable.rsz_innovation1);
+            add(R.drawable.rsz_robo);
+            add(R.drawable.rsz_hackathon);
+            add(R.drawable.rsz_game);
+            add(R.drawable.rsz_cyber1);
+            add(R.drawable.rsz_ltr);
+            add(R.drawable.rsz_bom);
+            add(R.drawable.rsz_bob1);
+            add(R.drawable.rsz_de);
         }};
 
         List<String> eventNames = new ArrayList<String>() {{

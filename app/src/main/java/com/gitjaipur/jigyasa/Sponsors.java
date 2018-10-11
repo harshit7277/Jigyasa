@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,17 +25,13 @@ public class Sponsors extends Fragment {
         View myview = inflater.inflate(R.layout.sponsors, container,false);
         mActivity = Sponsors.this.getActivity();
 
-        List<ItemObject> rowListItem =getAllItemList();
-        Layout = new LinearLayoutManager(mActivity);
+        List<ItemObject> sponsors =getAllItemList();
 
+        GridView sponsorsGridView = (GridView) myview.findViewById(R.id.gridview);
 
-        RecyclerView rView = (RecyclerView)myview.findViewById(R.id.recycler_view);
-        rView.setLayoutManager(Layout);
+        SponsorsListAdapter sponsorsListAdapter = new SponsorsListAdapter(mActivity, sponsors);
 
-
-        RecyclerViewAdapter rcAdapter;
-        rcAdapter = new RecyclerViewAdapter(rowListItem,mActivity);
-        rView.setAdapter(rcAdapter);
+        sponsorsGridView.setAdapter(sponsorsListAdapter);
 
         return myview;
     }
@@ -43,9 +40,8 @@ public class Sponsors extends Fragment {
 
         List<ItemObject> allItems = new ArrayList<ItemObject>();
 
-        allItems.add(new ItemObject( R.drawable.forsk,"Execution partner"));
-        allItems.add(new ItemObject( R.drawable.hunger,"Meal Partner"));
-        allItems.add(new ItemObject( R.drawable.idiot,"Marketing Partner"));
+        allItems.add(new ItemObject( R.drawable.rsz_adhoc,"Adhoc Networks"));
+
 
         return allItems;
     }

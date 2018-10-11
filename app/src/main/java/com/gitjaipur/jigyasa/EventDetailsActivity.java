@@ -11,6 +11,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_details);
 
+
         int eventSelected = getIntent().getIntExtra("EVENT_ID",-1);
         Toast.makeText(this, "Event Position"+ eventSelected, Toast.LENGTH_SHORT).show();
     }
