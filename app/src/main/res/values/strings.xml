@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Jigyasa 18</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="about">Jaipur largest technical festival organized by the student of GTC campus. The edition will be held from
+        15- 16 Oct. 2018. The combine efforts, Work and thoughts to achieve our goal, GTC family have setup a techfest to innovate and explore.
+As, in jigyasa we believe in having competitive and experimental people who give their best to fight.
+Jigyasa serves as a platform for those who are starving to explore The future in various innovation and competition.</string>
+</resources>
