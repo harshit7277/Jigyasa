@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".SplashActivity"
+    android:background="#000000"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
     <ImageView
         android:id="@+id/splashImage"
         android:layout_width="match_parent"
-        android:layout_height="499dp"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_height="match_parent"
+        android:src="@drawable/app"
+
         />
 
 

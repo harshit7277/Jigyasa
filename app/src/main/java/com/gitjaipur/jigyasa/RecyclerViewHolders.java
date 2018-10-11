@@ -28,7 +28,7 @@ class RecyclerViewHolders extends RecyclerView.ViewHolder implements View.OnClic
 
     @Override
     public void onClick(View v) {
-      //  Toast.makeText(v.getContext(), "Clicked Country Position = " + getPosition(), Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(v.getContext(), "Clicked Country Position = " + getPosition(), Toast.LENGTH_SHORT).EventDetails();
 
       /*  if (getPosition()==0) {
             Intent intent = new Intent(context, binary.class);

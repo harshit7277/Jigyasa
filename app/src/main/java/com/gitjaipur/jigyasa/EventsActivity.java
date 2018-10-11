@@ -1,7 +1,6 @@
 package com.gitjaipur.jigyasa;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ public class EventsActivity extends Fragment {
 
 
     public Activity mActivity;
+    ViewFlipper v_flippper;
 
     @Nullable
     @Override
@@ -28,29 +30,34 @@ public class EventsActivity extends Fragment {
         super.onCreate(savedInstanceState);
         int iconSize = getResources().getDimensionPixelSize(android.R.dimen.app_icon_size);
 
+        int images[]={R.drawable.main,R.drawable.arenacood};
+        v_flippper = myview.findViewById(R.id.view_flip);
+        for (int image: images){
+            flipperImages(image);
+        }
+
+
+
         GridView eventsGridView = (GridView) myview.findViewById(R.id.gridview);
 
         eventsGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent eventDetailsIntent = new Intent(mActivity, EventDetailsActivity.class);
 
-                eventDetailsIntent.putExtra("EVENT_ID", position);
-
-                startActivity(eventDetailsIntent);
+                EventDetails.showEvent(mActivity, position);
             }
         });
 
         List<Integer> imageIds = new ArrayList<Integer>() {{
-           /* add(R.drawable.head1);
-            add(R.drawable.head2);
-            add(R.drawable.head3);
-            add(R.drawable.head4);
-            add(R.drawable.head5);
-            add(R.drawable.head6);
-            add(R.drawable.head7);
-            add(R.drawable.head8);
-            add(R.drawable.head9); */
+            add(R.drawable.rsz_innovation1);
+            add(R.drawable.rsz_robo);
+            add(R.drawable.rsz_hackathon);
+            add(R.drawable.rsz_game);
+            add(R.drawable.rsz_cyber1);
+            add(R.drawable.rsz_ltr);
+            add(R.drawable.rsz_bom);
+            add(R.drawable.rsz_bob1);
+            add(R.drawable.rsz_de);
         }};
 
         List<String> eventNames = new ArrayList<String>() {{
@@ -72,5 +79,17 @@ public class EventsActivity extends Fragment {
         return myview;
     }
 
+
+        public void flipperImages(int image){
+            ImageView imageView = new ImageView(mActivity);
+            imageView.setBackgroundResource(image);
+
+            v_flippper.addView(imageView);
+            v_flippper.setFlipInterval(4000);
+            v_flippper.setAutoStart(true);
+
+            v_flippper.setInAnimation(mActivity,R.anim.slide_in_left);
+            v_flippper.setOutAnimation(mActivity, R.anim.slide_out_right);
+        }
 
 }

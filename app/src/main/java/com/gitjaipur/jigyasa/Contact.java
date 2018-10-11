@@ -43,8 +43,8 @@ public class Contact extends Fragment {
     public List<ItemContact> getAllItemList() {
         List<ItemContact> allItems = new ArrayList<ItemContact>();
 
-        allItems.add(new ItemContact("ROBO FLOOR","HEMANT JAGETIYA  8560938368",
-                "CHITTVILAS KALAL  9784608425","UJJWAL SINGHAL  94612277184","ANIRUDH JOSHI  9461066973"));
+        allItems.add(new ItemContact("ROBO FLOOR","Hemant Jagetiya  8560938368",
+                "Chittvilas Kalal  9784608425","Ujjwal Singhal  94612277184","Anirudh Joshi  9461066973"));
        allItems.add(new ItemContact("GAMING ADDA","SABIR MD.   8561907548",
                 "ROHIT KUMAR   8651197270","ASHIK KHAN    9509016520",""));
         allItems.add(new ItemContact("CYBER WORLD","MAYANK GARG    7737605609",
@@ -57,7 +57,7 @@ public class Contact extends Fragment {
                 "Hitesh Kotai   8058598104","Tushar Modi   8078668415",""));
         allItems.add(new ItemContact("INNOVATION","Atul Jain   8824636188",
                 "Gaurav Kakhani    9782375396","",""));
-        allItems.add(new ItemContact("BATTLE OF BANDS","PRIYYANKA   9070152111",
+        allItems.add(new ItemContact("BATTLE OF BANDS","PRIYANKA   9070152111",
                 "Manit Mandela   9460950957","Makrand Thakkar   9772221182",""));
         allItems.add(new ItemContact("ACCOMMODATION","DUSHYANT SINGH BHATI  7023575668",
                 "","",""));
@@ -71,7 +71,7 @@ public class Contact extends Fragment {
         allItems.add(new ItemContact("REGISTRATION DESK","Vijay Lakhotiya   9660393125",
                 "Makrand Thakkar   9772221182","Saurav kumar   7240731360",""));
         allItems.add(new ItemContact("DEVELOPERS & DESIGNER","Saurav kumar   7240731360",
-                "Makrand Thakkar   9772221182","Harshit kapoor  7277324983","Akshat jain 9799957194"));
+                "Makrand Thakkar   9772221182","Harshit kapoor  7277324983","Akshat Jain  7737240934"));
 
         return allItems;
     }

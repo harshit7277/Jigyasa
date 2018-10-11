@@ -1,14 +1,15 @@
 package com.gitjaipur.jigyasa;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Toast;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -30,16 +31,24 @@ public class SplashActivity extends AppCompatActivity {
             }, 3000);
         } else {
 
-            final Toast toast = Toast.makeText(getApplicationContext(), "NO NETWOK CONNECTION " +
-                    "PLEASE CHECK YOUR INTERNET CONNECTION", Toast.LENGTH_SHORT);
-            toast.show();
+            final AlertDialog dialog = new AlertDialog.Builder(this)
+                    .setTitle(" Error ")
+                    .setMessage("Pleae connect to a network?")
+                    .setPositiveButton("Retry",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    isNetworkAvailable();
+                                }
+                            }).create();
+            dialog.show();
             new CountDownTimer(5000, 1000) {
                 public void onTick(long millisUntilFinished) {
-                    toast.show();
+                    dialog.show();
                 }
 
                 public void onFinish() {
-                    toast.cancel();
+                    dialog.cancel();
                 }
             }.start();
 
